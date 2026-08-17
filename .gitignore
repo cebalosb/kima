@@ -1,0 +1,10 @@
+node_modules
+dist
+.env
+.env.local
+.claude/settings.local.json
+*.tsbuildinfo
+supabase/.temp/
+__pycache__/
+*.pyc
+

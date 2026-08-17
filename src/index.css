@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&family=JetBrains+Mono:wght@500&family=Sometype+Mono:ital,wght@0,400;0,500;0,600;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Agency-style type — mirrors the header/hero/footer treatment on lamalama.com */
+  --font-agency-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-agency-mono: "Sometype Mono", ui-monospace, monospace;
+
+  /* Base surfaces */
+  --color-background: #0a0a0a;
+  --color-surface: #171717;
+  --color-muted: #262626;
+  --color-border: #333333;
+  --color-primary: #1c1917;
+  --color-on-primary: #ffffff;
+  --color-secondary: #d4d4d4;
+  --color-foreground: #fafafa;
+  --color-foreground-muted: #a3a3a3;
+
+  /* Brand (primary CTA / selection) — blue */
+  --color-accent: #2563eb;
+  --color-accent-foreground: #ffffff;
+  --color-accent-soft: #dbeafe;
+
+  /* Focus / active-selection indicator (textbox focus, checked radio, selected swatch) */
+  --color-focus: #3b82f6;
+  --color-focus-foreground: #ffffff;
+  --color-focus-soft: #1e3a5f;
+
+  /* Semantic success (paid / valid / checked-in) */
+  --color-success: #16a34a;
+  --color-success-foreground: #ffffff;
+  --color-success-soft: #dcfce7;
+
+  /* Semantic states */
+  --color-destructive: #dc2626;
+  --color-destructive-foreground: #ffffff;
+  --color-destructive-soft: #fee2e2;
+  --color-warning: #d97706;
+  --color-warning-foreground: #ffffff;
+  --color-warning-soft: #fef3c7;
+
+  /* Payment brands */
+  --color-airtel: #e4002b;
+  --color-mtn: #ffcc08;
+
+  /* Category verticals */
+  --color-cat-nightout: #c026d3;
+  --color-cat-nightout-soft: #fae8ff;
+  --color-cat-nightout-fg: #a21caf;
+
+  --color-cat-education: #0d9488;
+  --color-cat-education-soft: #ccfbf1;
+  --color-cat-education-fg: #0f766e;
+
+  --color-cat-business: #4f46e5;
+  --color-cat-business-soft: #e0e7ff;
+  --color-cat-business-fg: #4338ca;
+
+  --color-cat-music: #e11d48;
+  --color-cat-music-soft: #ffe4e9;
+  --color-cat-music-fg: #be123c;
+
+  --color-cat-sports: #2563eb;
+  --color-cat-sports-soft: #dbeafe;
+  --color-cat-sports-fg: #1d4ed8;
+
+  --color-cat-artculture: #f59e0b;
+  --color-cat-artculture-soft: #fef3c7;
+  --color-cat-artculture-fg: #b45309;
+
+  --color-cat-fooddrink: #ea580c;
+  --color-cat-fooddrink-soft: #ffedd5;
+  --color-cat-fooddrink-fg: #c2410c;
+
+  --color-cat-technology: #0ea5e9;
+  --color-cat-technology-soft: #e0f2fe;
+  --color-cat-technology-fg: #0369a1;
+
+  --color-cat-healthwellness: #16a34a;
+  --color-cat-healthwellness-soft: #dcfce7;
+  --color-cat-healthwellness-fg: #15803d;
+
+  --color-cat-communitysocial: #db2777;
+  --color-cat-communitysocial-soft: #fce7f3;
+  --color-cat-communitysocial-fg: #be185d;
+
+  --color-cat-networking: #7c3aed;
+  --color-cat-networking-soft: #ede9fe;
+  --color-cat-networking-fg: #6d28d9;
+
+  --color-cat-religion: #475569;
+  --color-cat-religion-soft: #f1f5f9;
+  --color-cat-religion-fg: #334155;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+  .font-agency-display {
+    font-family: var(--font-agency-display);
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 0.85;
+    letter-spacing: -0.02em;
+  }
+  .font-agency-mono {
+    font-family: var(--font-agency-mono);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float {
+    animation: none;
+  }
+}
