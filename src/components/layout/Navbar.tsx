@@ -72,8 +72,8 @@ export function Navbar() {
                       ? 'bg-focus/30 text-white'
                       : 'bg-muted text-foreground'
                     : isHome
-                      ? 'text-white/80 hover:bg-focus/20 hover:text-white'
-                      : 'text-foreground-muted hover:text-foreground',
+                      ? 'text-white/80 hover:bg-focus/20 hover:text-accent'
+                      : 'text-foreground-muted hover:text-accent',
                 ].join(' ')
               }
             >
